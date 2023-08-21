@@ -1,0 +1,3 @@
+const abbrevationsRegex = new RegExp("\\b(" + Object.keys(abbrevations).join("|") + ")\\b", "gi");
+
+query = query.replace(abbrevationsRegex, match => abbrevations[match.toUpperCase()]);
